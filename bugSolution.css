@@ -1,0 +1,30 @@
+/* bugSolution.css */
+/* Solution for Bug 1: Ensure the parent container has a defined size */
+.container {
+  width: 500px; /* Explicitly define the width of the container */
+  display: flex;
+}
+
+.item {
+  flex: 1;
+  background-color: lightblue;
+  /* Correctly use calc() with a defined parent size */
+  margin: 10px;
+  width: calc(100% - 20px);
+}
+
+/* Solution for Bug 2: Maintain Consistent Unit Usage and Order of Operations */
+.item2 {
+  width: calc(50% - 10px);
+}
+
+/*Alternative solution using only percentages if possible*/
+.item3 {
+ width: 40%;
+ margin: 1%;
+}
+
+/* Using em units or other relative units can also enhance adaptability */
+.item4 {
+  width: calc(50% - 1em);
+}
